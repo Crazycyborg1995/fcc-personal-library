@@ -15,7 +15,7 @@ if (env === 'development') {
 } else if (env === 'production') {
   process.env.MONGODB_URI = `mongodb+srv://afsal:${
     process.env.PASSWORD
-  }@test-bxj9a.mongodb.net/test?retryWrites=true`;
+  }@personal-library-lxnat.mongodb.net/test?retryWrites=true`;
 }
 
 // DB Config
