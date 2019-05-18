@@ -1,0 +1,26 @@
+<div class="container">
+  {{#if book}}
+  <div class="card my-2 mt-4">
+    <div class="card-body">
+      <h2 class="card-title text-center mb-4">
+        {{book.title}}
+      </h2>
+      <h4 class="card-subtitle mb-2 text-muted" id="book-id">ID : {{book._id}}</h4>
+      <h5 class="card-text mt-4">Comments:</h5>
+      {{#each book.comments}}
+      <ul>
+        <li>{{this}}</li>
+      </ul>
+      {{/each}}
+      <form method="POST" id="add-comment">
+        <div class="form-group mt-6">
+          <textarea class="form-control mt-4" id="comment" rows="3"></textarea>
+          <button type="submit" class="btn btn-primary mt-4">ADD A COMMENT</button>
+        </div>
+      </form>
+    </div>
+    {{else}}
+  </div>
+  <h1 class="text-center">No Book Found!</h1>
+  {{/if}}
+</div>

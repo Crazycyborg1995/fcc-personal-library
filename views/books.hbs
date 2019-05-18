@@ -1,0 +1,20 @@
+<div class="container mt-5">
+  <div class="d-flex flex-wrap">
+    {{#if books}}
+    {{#each books}}
+    <div class="card m-2">
+      <div class="card-body">
+        <h4 class="card-title text-center mb-4">{{this.title}}</h4>
+        <h6 class="card-subtitle mb-2 text-muted">ID : {{this._id}}</h6>
+        <p class="card-text">Comment Count : {{this.comments.length}}</p>
+        {{{a this._id}}}
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  <button id="delete-btn" class="btn btn-primary btn-lg btn-block my-4"><i class="far fa-trash-alt mx-2"></i>Delete All
+    Books</button>
+  {{else}}
+  <h1 class="text-center">No Books Found!</h1>
+  {{/if}}
+</div>

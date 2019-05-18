@@ -1,0 +1,30 @@
+<div class="display-4 text-center my-4">
+  <i class="fas fa-book-open text-primary"></i> My <span class="text-primary">Book</span> List</div>
+
+<div class="container">
+  {{#if msg}}
+  {{{alert msg}}}
+  {{/if}}
+  <div class="card">
+    <div class="card-body">
+      <form id="add-book">
+        <div class="form-group">
+          <label for="title">Book Title</label>
+          <input type="text" class="form-control" id="title" placeholder="e.g, Oliver Twist">
+        </div>
+        <button type="submit" class="btn btn-primary">ADD BOOK</button>
+      </form>
+    </div>
+  </div>
+  <div class="card mt-4">
+    <div class="card-body">
+      <form id="delete-book">
+        <div class="form-group">
+          <label for="id">Book ID</label>
+          <input type="text" class="form-control" id="id" placeholder="Please enter book id">
+        </div>
+        <button type="submit" class="btn btn-primary">DELETE BOOK</button>
+      </form>
+    </div>
+  </div>
+</div>
